@@ -4,12 +4,12 @@ Automatically synchronized by RepoSync.
 
 ## Statistics
 
-Total solved: 10
+Total solved: 11
 
 ### By Platform
 | Platform | Count |
 |---|---|
-| codingninjas | 6 |
+| codingninjas | 7 |
 | leetcode | 4 |
 
 ### By Difficulty
@@ -17,16 +17,18 @@ Total solved: 10
 |---|---|
 | Easy | 5 |
 | Medium | 3 |
-| unknown | 2 |
+| unknown | 3 |
 
 ### By Language
 | Language | Count |
 |---|---|
+| java17 | 1 |
 | alllanguages | 6 |
 | unknown | 4 |
 
 ## Recent Submissions
 
+- [Unknown Problem](codingninjas/postfix-to-prefix-1788455) - codingninjas
 - [LCA of three Nodes](codingninjas/merge-intervals-699917) - codingninjas
 - [Unknown Problem](codingninjas/three-sum-6922132) - codingninjas
 - [Pair Sum](codingninjas/two-sum-839653) - codingninjas
