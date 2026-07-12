@@ -4,12 +4,13 @@ Automatically synchronized by RepoSync.
 
 ## Statistics
 
-Total solved: 1
+Total solved: 2
 
 | Platform | Count |
 |---|---|
-| leetcode | 1 |
+| leetcode | 2 |
 
 ## Recent Submissions
 
+- [15. 3Sum](leetcode/3sum) - leetcode
 - [1. Two Sum](leetcode/two-sum) - leetcode
