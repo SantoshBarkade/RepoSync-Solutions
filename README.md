@@ -4,29 +4,30 @@ Automatically synchronized by RepoSync.
 
 ## Statistics
 
-Total solved: 7
+Total solved: 8
 
 ### By Platform
 | Platform | Count |
 |---|---|
-| codingninjas | 3 |
+| codingninjas | 4 |
 | leetcode | 4 |
 
 ### By Difficulty
 | Difficulty | Count |
 |---|---|
-| Easy | 3 |
+| Easy | 4 |
 | Medium | 3 |
 | unknown | 1 |
 
 ### By Language
 | Language | Count |
 |---|---|
-| alllanguages | 3 |
+| alllanguages | 4 |
 | unknown | 4 |
 
 ## Recent Submissions
 
+- [Pair Sum](codingninjas/two-sum-839653) - codingninjas
 - [Leaderboard](codingninjas/leaderboard) - codingninjas
 - [Pair Sum](codingninjas/pair-sum) - codingninjas
 - [Pair Sum](codingninjas/unknown-problem) - codingninjas
