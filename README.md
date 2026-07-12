@@ -4,14 +4,15 @@ Automatically synchronized by RepoSync.
 
 ## Statistics
 
-Total solved: 3
+Total solved: 4
 
 | Platform | Count |
 |---|---|
-| leetcode | 3 |
+| leetcode | 4 |
 
 ## Recent Submissions
 
+- [56. Merge Intervals](leetcode/merge-intervals) - leetcode
 - [33. Search in Rotated Sorted Array](leetcode/search-in-rotated-sorted-array) - leetcode
 - [15. 3Sum](leetcode/3sum) - leetcode
 - [1. Two Sum](leetcode/two-sum) - leetcode
