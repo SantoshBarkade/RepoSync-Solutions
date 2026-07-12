@@ -4,12 +4,12 @@ Automatically synchronized by RepoSync.
 
 ## Statistics
 
-Total solved: 6
+Total solved: 7
 
 ### By Platform
 | Platform | Count |
 |---|---|
-| codingninjas | 2 |
+| codingninjas | 3 |
 | leetcode | 4 |
 
 ### By Difficulty
@@ -17,15 +17,17 @@ Total solved: 6
 |---|---|
 | Easy | 3 |
 | Medium | 3 |
+| unknown | 1 |
 
 ### By Language
 | Language | Count |
 |---|---|
-| alllanguages | 2 |
+| alllanguages | 3 |
 | unknown | 4 |
 
 ## Recent Submissions
 
+- [Leaderboard](codingninjas/leaderboard) - codingninjas
 - [Pair Sum](codingninjas/pair-sum) - codingninjas
 - [Pair Sum](codingninjas/unknown-problem) - codingninjas
 - [56. Merge Intervals](leetcode/merge-intervals) - leetcode
