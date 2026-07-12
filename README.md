@@ -4,12 +4,12 @@ Automatically synchronized by RepoSync.
 
 ## Statistics
 
-Total solved: 8
+Total solved: 9
 
 ### By Platform
 | Platform | Count |
 |---|---|
-| codingninjas | 4 |
+| codingninjas | 5 |
 | leetcode | 4 |
 
 ### By Difficulty
@@ -17,16 +17,17 @@ Total solved: 8
 |---|---|
 | Easy | 4 |
 | Medium | 3 |
-| unknown | 1 |
+| unknown | 2 |
 
 ### By Language
 | Language | Count |
 |---|---|
-| alllanguages | 4 |
+| alllanguages | 5 |
 | unknown | 4 |
 
 ## Recent Submissions
 
+- [Unknown Problem](codingninjas/three-sum-6922132) - codingninjas
 - [Pair Sum](codingninjas/two-sum-839653) - codingninjas
 - [Leaderboard](codingninjas/leaderboard) - codingninjas
 - [Pair Sum](codingninjas/pair-sum) - codingninjas
