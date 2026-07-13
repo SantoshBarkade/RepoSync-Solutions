@@ -4,30 +4,31 @@ Automatically synchronized by RepoSync.
 
 ## Statistics
 
-Total solved: 5
+Total solved: 6
 
 ### By Platform
 | Platform | Count |
 |---|---|
-| codingninjas | 1 |
+| codingninjas | 2 |
 | gfg | 2 |
 | leetcode | 2 |
 
 ### By Difficulty
 | Difficulty | Count |
 |---|---|
-| Easy | 2 |
+| Easy | 3 |
 | Medium | 1 |
 | unknown | 2 |
 
 ### By Language
 | Language | Count |
 |---|---|
-| java | 3 |
+| java | 4 |
 | unknown | 2 |
 
 ## Recent Submissions
 
+- [LCA of three Nodes](codingninjas/Easy/merge-intervals-699917/java/solution.java) — codingninjas
 - [56. Merge Intervals](leetcode/Medium/merge-intervals/unknown/solution.txt) — leetcode
 - [Merge Sort](gfg/unknown/merge-sort/java/solution.java) — gfg
 - [Reverse each word in a given string](gfg/unknown/reverse-each-word-in-a-given-string1001/java/solution.java) — gfg
