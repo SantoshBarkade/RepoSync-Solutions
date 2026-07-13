@@ -4,19 +4,19 @@ Automatically synchronized by RepoSync.
 
 ## Statistics
 
-Total solved: 8
+Total solved: 9
 
 ### By Platform
 | Platform | Count |
 |---|---|
 | codingninjas | 3 |
 | gfg | 1 |
-| leetcode | 4 |
+| leetcode | 5 |
 
 ### By Difficulty
 | Difficulty | Count |
 |---|---|
-| Easy | 6 |
+| Easy | 7 |
 | Medium | 1 |
 | unknown | 1 |
 
@@ -24,10 +24,11 @@ Total solved: 8
 | Language | Count |
 |---|---|
 | java | 7 |
-| unknown | 1 |
+| unknown | 2 |
 
 ## Recent Submissions
 
+- [704. Binary Search](leetcode/Easy/binary-search/unknown/solution.txt) — leetcode
 - [15. 3Sum](leetcode/Medium/3sum/unknown/solution.txt) — leetcode
 - [704. Binary Search](leetcode/Easy/binary-search/java/solution.java) — leetcode
 - [70. Climbing Stairs](leetcode/Easy/climbing-stairs/java/solution.java) — leetcode
