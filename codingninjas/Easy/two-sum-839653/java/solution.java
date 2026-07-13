@@ -1,3 +1,7 @@
+import java.util.*;
+ 
+public class Solution {
+ 
     public static ArrayList<Pair<Integer, Integer>> twoSum(ArrayList<Integer> arr, int target, int n) {
  
         ArrayList<Pair<Integer, Integer>> result = new ArrayList<>();
@@ -20,6 +24,3 @@
             result.add(new Pair<>(-1, -1));
         }
  
-        return result;
-    }
-}
