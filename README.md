@@ -4,29 +4,30 @@ Automatically synchronized by RepoSync.
 
 ## Statistics
 
-Total solved: 6
+Total solved: 7
 
 ### By Platform
 | Platform | Count |
 |---|---|
 | codingninjas | 3 |
 | gfg | 1 |
-| leetcode | 2 |
+| leetcode | 3 |
 
 ### By Difficulty
 | Difficulty | Count |
 |---|---|
-| Easy | 5 |
+| Easy | 6 |
 | unknown | 1 |
 
 ### By Language
 | Language | Count |
 |---|---|
 | java | 4 |
-| unknown | 2 |
+| unknown | 3 |
 
 ## Recent Submissions
 
+- [704. Binary Search](leetcode/Easy/binary-search/unknown/solution.txt) — leetcode
 - [70. Climbing Stairs](leetcode/Easy/climbing-stairs/unknown/solution.txt) — leetcode
 - [Ways to Reach the n'th Stair](gfg/unknown/count-ways-to-reach-the-nth-stair-1587115620/java/solution.java) — gfg
 - [LCA of three Nodes](codingninjas/Easy/binary-search-972/java/solution.java) — codingninjas
