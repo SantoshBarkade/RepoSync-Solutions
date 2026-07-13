@@ -4,30 +4,31 @@ Automatically synchronized by RepoSync.
 
 ## Statistics
 
-Total solved: 6
+Total solved: 7
 
 ### By Platform
 | Platform | Count |
 |---|---|
-| codingninjas | 2 |
+| codingninjas | 3 |
 | gfg | 2 |
 | leetcode | 2 |
 
 ### By Difficulty
 | Difficulty | Count |
 |---|---|
-| Easy | 3 |
+| Easy | 4 |
 | Medium | 1 |
 | unknown | 2 |
 
 ### By Language
 | Language | Count |
 |---|---|
-| java | 4 |
+| java | 5 |
 | unknown | 2 |
 
 ## Recent Submissions
 
+- [LCA of three Nodes](codingninjas/Easy/count-inversions-615/java/solution.java) — codingninjas
 - [LCA of three Nodes](codingninjas/Easy/merge-intervals-699917/java/solution.java) — codingninjas
 - [56. Merge Intervals](leetcode/Medium/merge-intervals/unknown/solution.txt) — leetcode
 - [Merge Sort](gfg/unknown/merge-sort/java/solution.java) — gfg
