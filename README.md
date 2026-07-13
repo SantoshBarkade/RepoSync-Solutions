@@ -4,12 +4,12 @@ Automatically synchronized by RepoSync.
 
 ## Statistics
 
-Total solved: 10
+Total solved: 11
 
 ### By Platform
 | Platform | Count |
 |---|---|
-| codingninjas | 3 |
+| codingninjas | 4 |
 | gfg | 1 |
 | leetcode | 6 |
 
@@ -18,16 +18,17 @@ Total solved: 10
 |---|---|
 | Easy | 8 |
 | Medium | 1 |
-| unknown | 1 |
+| unknown | 2 |
 
 ### By Language
 | Language | Count |
 |---|---|
-| java | 7 |
+| java | 8 |
 | unknown | 3 |
 
 ## Recent Submissions
 
+- [Unknown Problem](codingninjas/unknown/convert-prefix-to-postfix-8391014/java/solution.java) — codingninjas
 - [1. Two Sum](leetcode/Easy/two-sum/unknown/solution.txt) — leetcode
 - [704. Binary Search](leetcode/Easy/binary-search/unknown/solution.txt) — leetcode
 - [15. 3Sum](leetcode/Medium/3sum/unknown/solution.txt) — leetcode
