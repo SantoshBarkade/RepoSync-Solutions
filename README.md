@@ -4,13 +4,13 @@ Automatically synchronized by RepoSync.
 
 ## Statistics
 
-Total solved: 12
+Total solved: 13
 
 ### By Platform
 | Platform | Count |
 |---|---|
 | codingninjas | 4 |
-| gfg | 1 |
+| gfg | 2 |
 | leetcode | 7 |
 
 ### By Difficulty
@@ -18,16 +18,17 @@ Total solved: 12
 |---|---|
 | Easy | 8 |
 | Medium | 2 |
-| unknown | 2 |
+| unknown | 3 |
 
 ### By Language
 | Language | Count |
 |---|---|
-| java | 8 |
+| java | 9 |
 | unknown | 4 |
 
 ## Recent Submissions
 
+- [Problem Solved Successfully](gfg/unknown/spirally-traversing-a-matrix-1587115621/java/solution.java) — gfg
 - [54. Spiral Matrix](leetcode/Medium/spiral-matrix/unknown/solution.txt) — leetcode
 - [Unknown Problem](codingninjas/unknown/convert-prefix-to-postfix-8391014/java/solution.java) — codingninjas
 - [1. Two Sum](leetcode/Easy/two-sum/unknown/solution.txt) — leetcode
