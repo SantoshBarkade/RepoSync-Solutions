@@ -4,30 +4,31 @@ Automatically synchronized by RepoSync.
 
 ## Statistics
 
-Total solved: 11
+Total solved: 12
 
 ### By Platform
 | Platform | Count |
 |---|---|
 | codingninjas | 4 |
 | gfg | 1 |
-| leetcode | 6 |
+| leetcode | 7 |
 
 ### By Difficulty
 | Difficulty | Count |
 |---|---|
 | Easy | 8 |
-| Medium | 1 |
+| Medium | 2 |
 | unknown | 2 |
 
 ### By Language
 | Language | Count |
 |---|---|
 | java | 8 |
-| unknown | 3 |
+| unknown | 4 |
 
 ## Recent Submissions
 
+- [54. Spiral Matrix](leetcode/Medium/spiral-matrix/unknown/solution.txt) — leetcode
 - [Unknown Problem](codingninjas/unknown/convert-prefix-to-postfix-8391014/java/solution.java) — codingninjas
 - [1. Two Sum](leetcode/Easy/two-sum/unknown/solution.txt) — leetcode
 - [704. Binary Search](leetcode/Easy/binary-search/unknown/solution.txt) — leetcode
