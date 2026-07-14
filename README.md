@@ -4,12 +4,12 @@ Automatically synchronized by RepoSync.
 
 ## Statistics
 
-Total solved: 13
+Total solved: 14
 
 ### By Platform
 | Platform | Count |
 |---|---|
-| codingninjas | 4 |
+| codingninjas | 5 |
 | gfg | 2 |
 | leetcode | 7 |
 
@@ -18,16 +18,17 @@ Total solved: 13
 |---|---|
 | Easy | 8 |
 | Medium | 2 |
-| unknown | 3 |
+| unknown | 4 |
 
 ### By Language
 | Language | Count |
 |---|---|
-| java | 9 |
+| java | 10 |
 | unknown | 4 |
 
 ## Recent Submissions
 
+- [Unknown Problem](codingninjas/unknown/sum-of-subarray-minimums-8365431/java/solution.java) — codingninjas
 - [Problem Solved Successfully](gfg/unknown/spirally-traversing-a-matrix-1587115621/java/solution.java) — gfg
 - [54. Spiral Matrix](leetcode/Medium/spiral-matrix/unknown/solution.txt) — leetcode
 - [Unknown Problem](codingninjas/unknown/convert-prefix-to-postfix-8391014/java/solution.java) — codingninjas
