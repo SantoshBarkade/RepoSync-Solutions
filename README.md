@@ -4,30 +4,33 @@ Automatically synchronized by RepoSync.
 
 ## Statistics
 
-Total solved: 14
+Total solved: 17
 
 ### By Platform
 | Platform | Count |
 |---|---|
-| codingninjas | 5 |
-| gfg | 2 |
-| leetcode | 7 |
+| codingninjas | 6 |
+| gfg | 3 |
+| leetcode | 8 |
 
 ### By Difficulty
 | Difficulty | Count |
 |---|---|
-| Easy | 8 |
-| Medium | 2 |
-| unknown | 4 |
+| Easy | 9 |
+| Medium | 3 |
+| unknown | 5 |
 
 ### By Language
 | Language | Count |
 |---|---|
-| java | 10 |
-| unknown | 4 |
+| java | 12 |
+| unknown | 5 |
 
 ## Recent Submissions
 
+- [LCA of three Nodes](codingninjas/Easy/asteroid-collision-977232/java/solution.java) — codingninjas
+- [Subarrays with sum K](gfg/unknown/subarrays-with-sum-k/java/solution.java) — gfg
+- [560. Subarray Sum Equals K](leetcode/Medium/subarray-sum-equals-k/unknown/solution.txt) — leetcode
 - [Unknown Problem](codingninjas/unknown/sum-of-subarray-minimums-8365431/java/solution.java) — codingninjas
 - [Problem Solved Successfully](gfg/unknown/spirally-traversing-a-matrix-1587115621/java/solution.java) — gfg
 - [54. Spiral Matrix](leetcode/Medium/spiral-matrix/unknown/solution.txt) — leetcode
