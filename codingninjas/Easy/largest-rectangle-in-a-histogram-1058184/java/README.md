@@ -36,3 +36,35 @@ To ensure all bars remaining in the stack are processed at the end of the loop, 
 ### Space Complexity
 - **O(N)**: In the worst-case scenario (e.g., if the heights are in strictly increasing order), all indices will be pushed onto the stack before any are popped, requiring linear space proportional to the size of the input array.
 
+
+
+## AI Solution Notes
+
+# LCA of three Nodes
+
+## 1. **Brute Force Approach**
+To find the Largest Rectangle in a Histogram, a brute force approach would involve iterating through every possible pair of bars in the histogram. For each pair (i, j), you would find the minimum height among all bars from index i to j. The area for that rectangle would then be calculated as `minHeight * (j - i + 1)`. By checking all possible sub-segments, the complexity becomes significantly higher than the optimal approach.
+
+## 2. **Optimal Approach**
+The provided solution implements the **Monotonic Increasing Stack** algorithm. The goal is is to determine, for every bar, the nearest bar to its left and the right that is strictly shorter than itself. These two boundaries define the maximum width for which the current bar can serve as the shortest bar in a rectangle.
+
+### Algorithm Steps:
+1. **Monotonic Stack Maintenance**: We iterate through the histogram bars. The stack stores indices of the bars in non-decreasing order of their heights. 
+2. **The Trigger Condition**: When we encounter a bar (`currHeight`) that is shorter than the bar at the top of the stack (`heights.get(stack.peek())`), it means we have found the right boundary for the bar at the top of the stack. 
+3. **Calculating Area**: 
+    - We pop the top index from the stack. This index represents the bar whose area we are currently calculating.
+    - The popped bar's height is the `height`.
+    - The **right boundary** is the current index `i` (the first bar to the right that is shorter).
+    - The **left boundary** is the new top of the stack after the popping (the first bar to the left that is shorter). If the stack is empty, the left boundary is `-1`.
+    - The `width` is calculated as `right - left - 1`.
+    - `area = width * height`.
+4. **Sentinel Value**: The loop runs up to `i == n`. When `i == n`, `currHeight` is set to `0`. This acts as a virtual bar of height zero at the end of the histogram, which forces the stack to clear and ensures all remaining bars in the stack are processed and their areas calculated.
+
+## 3. **Complexity Analysis**
+
+### Time Complexity
+- **O(N)**: Each index is pushed onto the stack exactly once and popped from the stack exactly once. Even though there is a nested `while` loop, the total number of push and pop operations is linear relative to the number of bars `N`.
+
+### Space Complexity
+- **O(N)**: In the worst case (eg., a strictly increasing sequence of heights), the stack will store all `N` indices.
+
