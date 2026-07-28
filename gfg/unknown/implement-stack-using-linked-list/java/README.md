@@ -39,3 +39,82 @@ In this implementation, the stack follows the **Last-In-First-Out (LIFO)** princ
 ### Space Complexity
 - **Overall Space Complexity**: $O(N)$, where $N$ is the number of elements currently stored in the stack. Each element requires the introduction of a new `Node` object in memory, which stores both the integer data and a pointer to the next node.
 
+
+
+## AI Solution Notes
+
+# Stack Implementation using Linked List
+
+## 1. **Brute Force Approach**
+One could implement a stack using a dynamic array (like `ArrayList` in Java). While this allows for $O(1)$ amortized push operations, resizing the array when it reaches capacity can lead to $O(n)$ latency for certain insertions. Alternatively, one could use a fixed-size array, which lacks the flexibility of dynamic memory allocation and may lead to stack overflow if the capacity is exceeded.
+
+## 2. **Optimal Approach**
+The provided solution implements a stack using a **Singly Linked List**. This is the most efficient way to implement a stack when the size is not known in advance, as it avoids the array resizing overhead. In this implementation, the `top` pointer always points to the head of the linked list, representing the top of the stack.
+
+### Key Components:
+* **`Node` Class**: Each node contains an integer `data` and a pointer `next` to the next node in the stack. This structure allows for continuous memory allocation as needed.
+* **`top` Pointer**: A reference to the most recently added node. All stack operations are occur at this pointer.
+* **`count` Variable**: An integer that keeps track of the number of elements currently in the stack, allowing for $O(1)$ retrieval of the stack size.
+
+### Operations:
+* **`push(int x)`**: 
+    1. Create a new node with value `x`.
+    2. Set the new node's `next` pointer to the current `top`.
+    3. Update `top` to the new node. This makes the new node the new head of the list.
+    4. Increment `count`.
+* **`pop()`**: 
+    1. Check if the stack is empty using `isEmpty()`.
+    2. If not empty, move the `top` pointer to `top.next`.
+    3. This effectively removes the head node from the list, and the Java Garbage Collector will reclaim the memory of the unreferenced node.
+    4. Decrement `count`.
+* **`peek()`**: 
+    1. Check if the stack is empty.
+    2. If empty, return `-1` (as per requirement).
+    3. Otherwise, return `top.data`.
+* **`isEmpty()`**: 
+    1. Returns `true` if `top == null`, indicating there are no nodes in the list.
+* **`size()`**: 
+    1. Returns the current value of `count`.
+
+## 3. **Complexity Analysis**
+
+### Time Complexity:
+* **`push(int x)`**: $O(1)$. Adding a node to the head of a linked list is a constant time operation.
+* **`pop()`**: $O(1)$. Moving the head pointer to the next node is a constant time operation.
+* **`peek()`**: $O(1)$. Accessing the data at the current `top` node is $O(1)$. 
+* **`isEmpty()`**: $O(1)$. Comparing a null reference to null is $O(1)$. 
+* **`size()`**: $O(1)$. Accessing the pre-maintained `count` variable is $O(1)$. 
+
+### Space Complexity:
+* **Total Space**: $O(n)$, where $n$ is the number of elements stored in the stack, as each element requires a node in memory.
+* **Auxiliary Space**: $O(1)$ per operation, as no extra space proportional to the input size is used during the execution of a single method call (excluding the memory required for the node itself).
+
+## 4. **Dry Run**
+
+**Scenario**: Push(10), Push(20), Peek(), Pop(), Pop(), Size()
+
+1.  **Initialization**: `top = null`, `count = 0`.
+2.  **`push(10)`**:
+    * New Node(10) created.
+    * `newNode.next` = `null` (current `top`).
+    * `top` = `Node(10)`.
+    * `count = 1`.
+3.  **`push(20)`**:
+    * New Node(20) created.
+    * `4.  **`peek()`**:
+    * Returns `top.data` which is `20`.
+    * Result: `20`.
+4.  **`pop()`**:
+    * `top` is not null. 
+    * `top` = `top.next` (which is `Node(10)`).
+    * `top` = `Node(10)`.
+    * `count = 1`.
+5.  **`pop()`**:
+    * `top` is not null.
+    * `top` = `top.next` (which is `null`).
+    * `top = null`.
+    * `count = 0`.
+6.  **`6.  **`size()`**:
+    * Returns `count` which is `0`.
+    * Result: `0`.
+
