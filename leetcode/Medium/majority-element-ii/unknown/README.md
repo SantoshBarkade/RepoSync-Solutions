@@ -1,0 +1,64 @@
+# 229. Majority Element II
+
+- **Platform:** leetcode
+- **Difficulty:** Medium
+- **Tags:** 
+- **URL:** [Link](https://leetcode.com/problems/majority-element-ii/description/)
+
+## Solution Notes
+
+# Majority Element II Technical Notes
+
+## 1. **Brute Force Approach**
+
+A brute force approach would involve using a hash map to store the frequency of every element in the array. You would iterate through the array once to count occurrences and then iterate through the map to find keys whose values (counts) are greater than `n/3`. While this has a time complexity of $O(n)$, it requires $O(n)$ extra space to store the frequencies.
+
+## 2. **Optimal Approach**
+
+This solution implements the **Boyer-Moore Voting Algorithm** extended to find up to two potential candidates. Since the problem asks for elements that appear more than $\lfloor n/3 \rfloor$ times, there can be at most two such elements in any given array.
+
+### Step 1: Finding Candidates
+
+The algorithm maintains two potential candidates (`el1`, `el2`) and two counters (`cnt1`, `cnt2`). We iterate through the array once to identify the most frequent elements through a process of 'cancellation'.
+
+1.  **Match Candidate 1**: If the current number matches `el1`, increment `cnt1`.
+2.  **Match Candidate 2**: If the current number matches `el2`, increment `cnt2`.
+3.  **Match/Assign Candidate 1**: If `cnt1` is zero, assign the current number as `el1` and set `cnt1` to 1.
+4.  **Match/Assign Candidate 2**: If `cnt2` is zero, assign the current number as `el2` and set `cnt2` to 1.
+5.  **Mismatch/Cancel**: If the current number is different from both candidates and both counters are greater than zero, decrement both `cnt1` and `cnt2`. This effectively cancels out three distinct elements.
+
+### Step 2: Verification
+
+The Boyer-Moore algorithm only identifies *potential* candidates. It does not guarantee they meet the threshold requirement. Therefore, a second pass is required to count the exact occurrences of `el1` and `el2` in the original array to verify if they truly appear more than $n/3$ times.
+
+## 3. **Complexity Analysis**
+
+### Time Complexity
+- **First Pass**: $O(n)$ to iterate through the array and find candidates.
+- **Second Pass**: $O(n)$ to verify the count of the candidates.
+- **Total**: $O(n)$, where $n$ is the number of elements in the array.
+
+### Space Complexity
+- **$O(1)$**: The algorithm only uses a fixed number of variables (`el1`, `el2`, `cnt1`, `cnt2`, `res`) regardless of the input size, satisfying the constant space requirement.
+
+## 4. **Dry Run**
+
+**Input**: `nums = [3, 2, 3]`
+**Target Threshold**: `n/3 = 3/3 = 1` (Elements must appear $> 1$ time)
+
+| Iteration | `num` | `el1` | `cnt1` | `el2` | `cnt2` | Action |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Initial | - | `null` | 0 | `null` | 0 | - |
+| 1 | 3 | 3 | 1 | `null` | 0 | `el1 = 3`, `cnt1 = 1` |
+| 2 | 2 | 3 | 1 | 2 | 1 | `el2 = 2`, `cnt2 = 1` |
+| 3 | 3 | 3 | 2 | 2 | 1 | `cnt1++` (matches `el1`) |
+
+**Verification Pass**:
+- Count occurrences of `el1` (3): 2
+- Count occurrences of `el2` (2): 1
+
+**Final Check**:
+- `cnt1` (2) > 1? **Yes** $\rightarrow$ add `3` to result.
+- `cnt2` (1) > 1? **No**.
+
+**Output**: `[3]`
