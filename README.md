@@ -4,13 +4,13 @@ Automatically synchronized by RepoSync.
 
 ## Statistics
 
-Total solved: 38
+Total solved: 39
 
 ### By Platform
 | Platform | Count |
 |---|---|
 | codingninjas | 10 |
-| gfg | 13 |
+| gfg | 14 |
 | leetcode | 15 |
 
 ### By Difficulty
@@ -19,16 +19,17 @@ Total solved: 38
 | Easy | 14 |
 | Medium | 6 |
 | Hard | 1 |
-| unknown | 17 |
+| unknown | 18 |
 
 ### By Language
 | Language | Count |
 |---|---|
-| java | 26 |
+| java | 27 |
 | unknown | 12 |
 
 ## Recent Submissions
 
+- [Reverse an Array](gfg/unknown/reverse-an-array/java/solution.java) — gfg
 - [493. Reverse Pairs](leetcode/Hard/reverse-pairs/unknown/solution.txt) — leetcode
 - [LCA of three Nodes](codingninjas/Easy/remove-k-digits-1461221/java/solution.java) — codingninjas
 - [Problem Solved Successfully](gfg/unknown/majority-vote/java/solution.java) — gfg
@@ -48,4 +49,3 @@ Total solved: 38
 - [One-Line Memory Trick](gfg/unknown/inversion-of-array-1587115620/java/solution.java) — gfg
 - [BEST C++ SOLUTION](gfg/unknown/implement-queue-using-linked-list/java/solution.java) — gfg
 - [Stack using Linked List](gfg/unknown/implement-stack-using-linked-list/java/solution.java) — gfg
-- [Accepted Java Solution :](gfg/unknown/count-reverse-pairs/java/solution.java) — gfg
