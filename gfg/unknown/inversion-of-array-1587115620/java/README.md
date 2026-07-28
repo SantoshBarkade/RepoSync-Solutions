@@ -75,3 +75,79 @@ n   - `left=0 (val 4), mid=1, right=2 (val 1), high=3`
 
 5. **Final Result**: Total Inversions = $1 (	ext{from left}) + 1 (	ext{from right}) + 4 (	ext{from final merge}) = 6$. 
 - Wait, let's re-check the logic. Input `[8, 4, 2, 1]`. Pairs: (8,4), (8,2), (8,1), (4,2), (4,1), (2,1). Total is 6. Correct.
+
+
+## AI Solution Notes
+
+# One-Line Memory Trick - Inversion Count
+
+## 1. **Brute Force Approach**
+To find the number of inversions in an array, a brute force approach would involve using two nested loops. The outer loop iterates through each element $i$ from $0$ to $n-1$, and the inner loop iterates through each element $j$ from $i+1$ to $n-1$. For every pair $(i, j)$, if $arr[i] > arr[j]$, an inversion is counted. This approach is straightforward but inefficient for large datasets due to its high time complexity.
+
+## 2. **Optimal Approach**
+The optimal approach utilizes the **Divide and Conquer** strategy, specifically a modified version of the **Merge Sort** algorithm. The core idea is to count inversions while sorting the array. 
+
+### Divide Phase
+1. The array is recursively divided into two halves until each sub-array contains only one element. A single element is inherently sorted and has zero inversions.
+
+### Conquer and Merge Phase
+2. During the merge step, two sorted sub-arrays (left part and right part) are merged into a single sorted array. This is where the inversion count is calculated:
+    - If $arr[left] \leq arr[right]$, there is no inversion between the current elements of the left and right sub-arrays. The element from the left sub-array is added to the result list.
+    - If $arr[left] > arr[right]$, then since the left sub-array is also sorted, every remaining element in the left sub-array from the index `left` to `mid` is greater than `arr[right]`. Thus, the number of inversions contributed by `arr[right]` is calculated as `(mid - left + 1)`. This count is added to the total inversion count.
+
+### Reassembling
+3. After the merge step, the elements are merged into a temporary list and then copied back into the original array to maintain the sorted order for higher-level recursive calls.
+
+## 3. **Complexity Analysis**
+
+### Time Complexity
+- **Best, Average, and Worst Case**: $O(N \log N)$. The array is divided into $\log N$ levels of recursion, and at each level, the work done in thes `merge` function (merging two sub-arrays) is proportional to $N$. This follows the standard time complexity of Merge Sort.
+
+### Space Complexity
+- **Space Complexity**: $O(N)$. An auxiliary list (or array) `res` is used during the merge step to store the elements temporarily. Additionally, the recursive stack space used by the method calls is $O(\log N)$, but the dominant factor is $O(N)$ due to the temporary storage.
+
+## 4. **Dry Run**
+
+**Input Array**: `[8, 4, 2, 1]`
+
+1. **Initial Call**: `mergeSort(arr, 0, 3)`
+   - Splits into `mergeSort(arr, 0, 1)` and `mergeSort(arr, 2, 3)`.
+
+2. ****Sub-problem 1**: `mergeSort(arr, 0, 1)` ([8, 4])
+   - Splits into `mergeSort(arr, 0, 0)` ([8]) and `mergeSort(arr, 1, 1)` ([4]).
+   - **Merge([8], [4])**:
+     - $left=0, right=1$. $arr[0]=8, arr[1]=4$. 
+     - $8 > 4$: `cnt += (mid - left + 1)` $\rightarrow$ `cnt += (0 - 0 + 1) = 1`. `res = [4]`. `right++`.
+     - $left=0$. $arr[0]=8$. `res = [4, 8]`. `left++`.
+     - **Array state after merge**: `[4, 8, 2, 1]`
+     - **Inversion count**: 1.
+
+3. ****Sub-problem 2**: `mergeSort(arr, 2, 3)` ([2, 1])
+   - Splits into `mergeSort(arr, 2, 2)` ([2]) and `mergeSort(arr, 3, 3)` ([1]).
+   - **Merge([2], [1])**:
+     - $left=2, right=3$. $arr[2]=2, arr[3]=1$. 
+     - $2 > 1$: `cnt += (mid - left + 1)` $\rightarrow$ `cnt += (2 - 2 + 1) = 1`. `res = [1]`. `right++`.
+     - $left=2$. $arr[2]=2$. `res = [1, 2]`. `left++`.
+     - **Array state after merge**: `[4, 8, 1, 2]`
+     - **Inversion count**: 1.
+
+4. **Final Merge (Merge [4, 8] and [1, 2])**:
+   - $left=0, right=2$. $arr[0]=4, arr[2]=1$.
+   - $4 > 1$: `cnt += (mid - left + 1)` $ightarrow$ `cnt += (1 - 0 + 1) = 2`. `res = [1]`. `right++`.
+   - $left=0, right=2$. $arr[0]=4, arr[3]=2$.
+   - $4 > 2$: `cnt += (mid - left + 1)` $ightarrow$ `cnt += (1 - 0 + 1) = 2`. `res = [1, 2]`. `right++`.
+   - $left=0, right=2$. $arr[0]=4, arr[1]=8$. 
+   - $4 \leq 8$: `res = [1, 2, 4]`. `left++`.
+   - $left=1, right=2$. $arr[1]=8, (no	ext{ more right elements})$. 
+   - **Loop ends**. Remaining elements from left: `res = [1, 2, 4, 8]`. `left++`.
+   - **Total Inversions**: $1 (from	ext{ sub-problem 1}) + 1 (from	ext{ sub-problem 2}) + 3 (from	ext{ final merge merge}) = 5$. Wait, let's re-verify the inversion count manually: (8,4), (8,2), (8,1), (4,2), (4,1), (2,1) $ightarrow$ 6 inversions. 
+   - Let's re-verify the logic: 
+     - (8,4) is 1.
+     - (2,1) is 1.
+     - Merge([4,8], [1,2]): 
+       - 4 > 1: (4,1) and (8,1) are 2.
+       - 4 > 2: (4,2) and (8,2) are 2.
+       - Total: 1 + 1 + 2 + 2 = 6. 
+
+   - **Wait, my calculation error in dry run step 4**: $1+1+2+2 = 6$. Correct.
+   - **Total Inversions**: 6.
