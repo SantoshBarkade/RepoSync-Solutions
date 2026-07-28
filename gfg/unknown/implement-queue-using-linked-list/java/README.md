@@ -80,3 +80,86 @@ The provided code implements a Queue data structure using a **Singly Linked List
     *   Current state: `front` points to 30, `rear=30`.
 8.  `q.isEmpty()`
     *   Returns `false` (since `size=1`).
+
+
+## AI Solution Notes
+
+## 1. **Brute Force Approach**
+
+In the context of implementing a queue using a linked list, a 'brute force' approach might involve using a fixed-size array. However, since the size of the queue is not predefined, a static array would lead to inefficient space usage or overflow errors. An alternative brute-force method would be be to use a dynamic array (like `ArrayList` in Java) to simulate a queue. While functional, this approach requires expensive $O(N)$ time complexity for `dequeue` operations because all subsequent elements in the array must be shifted one position to the left to fill the gap created at the front. 
+
+## 2. **Optimal Approach**
+
+The provided solution implements a queue using a **Singly Linked List** via a custom `Node` class and a `myQueue` class. This is the optimal approach for a dynamic queue because it allows for $O(1)$ time complexity for both insertion (enqueue) and deletion (dequeue) without the need for resizing or shifting elements.
+
+### Key Components:
+1. **Node Class**: 
+   - Stores `data` (integer) and a pointer/reference `next` to the next node in the sequence.
+2. **myQueue Class Members**:
+   - `front`: A pointer to the first node in the queue. This is where deletions occur.
+   - `rear`: A pointer to the last node in the queue. This is where insertions occur.
+   - `size`: An integer tracking the current number of elements.
+
+### Operations Logic:
+- **`enqueue(int x)`**: 
+   - A new node is created with value `x`.
+   - If the queue is empty (`front == null`), both `front` and `rear` are set to the new node.
+   - If the queue is not empty, the current `rear.next` is linked to the new node, and the `rear` pointer is updated to this new node.
+   - The `size` is incremented.
+- **`dequeue()`**: 
+   - If the queue is empty, the function returns immediately.
+   - The `front` pointer is moved to `front.next`. 
+   - The *Note*: To ensure complete memory management in languages like C++, one would delete the node; in Java, the Garbage Collector handles the unreferenced node.
+   - The `size` is decremented.
+- **`getFront()`**: 
+   - Simply returns the data of the node pointed to by `front`. Returns `-1` if empty.
+- **`isEmpty()`**: 
+   - Returns `true` if `size == 0`.
+
+## 3. **Complexity Analysis**
+
+### Time Complexity:
+- **`enqueue(int x)`**: $O(1)$ - We only perform a constant number of pointer updates at the rear.
+- **`dequeue()`**: $O(1)$ - We only update the front pointer to the next node.
+- **`getFront()`**: $O(1)$ - Direct access via the `front` pointer.
+- **`isEmpty()``**: $O(1)$ - Simple integer comparison.
+- **`size()`**: $O(1)$ - Returns a pre-calculated size variable.
+
+### Space Complexity:
+- **Total Space**: $O(N)$, where $N$ is the number of the elements stored in the queue, as each element requires a dedicated `Node` object in memory.
+- **Auxiliary Space**: $O(1)$ per operation, as no additional significant memory is used beyond the node itself and a few pointers.
+
+## 4. **Dry Run**
+
+**Scenario**: 
+1. `enqueue(10)`
+2. `enqueue(20)`
+3. `dequeue()`
+4. `getFront()`
+
+**Step-by-Step Execution**:
+
+1. **Initial State**: 
+   - `front = null`, `rear = null`, `size = 0`.
+
+2. **`enqueue(10)`**:
+   - New Node(10) created.
+   - `front = null`, so `front = Node(10)`, `rear = Node(10)`. 
+   - `size = 1`.
+   - *Queue Structure*: `[10] -> null` (front is 10).
+
+3. **`enqueue(20)`**:
+   - New Node(20) created.
+   - `front` is not `null`, so `rear.next = Node(20)` and `rear = Node(20)`.
+   - `size = 2`.
+   - *Queue Structure*: `[10] -> [20] -> null` (front is 10, rear is 20).
+
+4. **`dequeue()`**:
+   - `front` is not `null`.
+   - `front = front.next` (front now points to Node(20)).
+   - `size = 1`.
+   - *Queue Structure*: `[20] -> null` (front is 20, rear is 20).
+
+5. **`getFront()`**:
+   - `front` is Node(20), so `front.data = 20`.
+   - **Result**: `20`.
