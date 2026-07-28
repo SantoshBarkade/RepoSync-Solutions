@@ -4,30 +4,38 @@ Automatically synchronized by RepoSync.
 
 ## Statistics
 
-Total solved: 31
+Total solved: 38
 
 ### By Platform
 | Platform | Count |
 |---|---|
-| codingninjas | 8 |
-| gfg | 11 |
-| leetcode | 12 |
+| codingninjas | 10 |
+| gfg | 13 |
+| leetcode | 15 |
 
 ### By Difficulty
 | Difficulty | Count |
 |---|---|
-| Easy | 12 |
-| Medium | 5 |
-| unknown | 14 |
+| Easy | 14 |
+| Medium | 6 |
+| Hard | 1 |
+| unknown | 17 |
 
 ### By Language
 | Language | Count |
 |---|---|
-| java | 22 |
-| unknown | 9 |
+| java | 26 |
+| unknown | 12 |
 
 ## Recent Submissions
 
+- [493. Reverse Pairs](leetcode/Hard/reverse-pairs/unknown/solution.txt) — leetcode
+- [LCA of three Nodes](codingninjas/Easy/remove-k-digits-1461221/java/solution.java) — codingninjas
+- [Problem Solved Successfully](gfg/unknown/majority-vote/java/solution.java) — gfg
+- [229. Majority Element II](leetcode/Medium/majority-element-ii/unknown/solution.txt) — leetcode
+- [Unknown Problem](codingninjas/unknown/subarray-range-sum-8365419/java/solution.java) — codingninjas
+- [Problem Solved Successfully](gfg/unknown/pascal-triangle0652/java/solution.java) — gfg
+- [118. Pascal's Triangle](leetcode/Easy/pascals-triangle/unknown/solution.txt) — leetcode
 - [509. Fibonacci Number](leetcode/Easy/fibonacci-number/unknown/solution.txt) — leetcode
 - [Problem Solved Successfully](gfg/unknown/factorial5739/java/solution.java) — gfg
 - [Leaderboard](codingninjas/unknown/sum-of-first-n-numbers-9065113/java/solution.java) — codingninjas
@@ -41,10 +49,3 @@ Total solved: 31
 - [BEST C++ SOLUTION](gfg/unknown/implement-queue-using-linked-list/java/solution.java) — gfg
 - [Stack using Linked List](gfg/unknown/implement-stack-using-linked-list/java/solution.java) — gfg
 - [Accepted Java Solution :](gfg/unknown/count-reverse-pairs/java/solution.java) — gfg
-- [LCA of three Nodes](codingninjas/Easy/largest-rectangle-in-a-histogram-1058184/java/solution.java) — codingninjas
-- [LCA of three Nodes](codingninjas/Easy/asteroid-collision-977232/java/solution.java) — codingninjas
-- [Subarrays with sum K](gfg/unknown/subarrays-with-sum-k/java/solution.java) — gfg
-- [560. Subarray Sum Equals K](leetcode/Medium/subarray-sum-equals-k/unknown/solution.txt) — leetcode
-- [Unknown Problem](codingninjas/unknown/sum-of-subarray-minimums-8365431/java/solution.java) — codingninjas
-- [Problem Solved Successfully](gfg/unknown/spirally-traversing-a-matrix-1587115621/java/solution.java) — gfg
-- [54. Spiral Matrix](leetcode/Medium/spiral-matrix/unknown/solution.txt) — leetcode
